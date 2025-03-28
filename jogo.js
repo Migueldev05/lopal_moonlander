@@ -47,6 +47,7 @@ function desenharModuloLunar() {
     // Restaura o contexto salvo.
 }
 
+
 function desenharChama() {
     contexto.beginPath();
     contexto.moveTo(moduloLunar.largura * -0.5, moduloLunar.altura * 0.5);
@@ -86,7 +87,15 @@ function desenhar() {
     mostrarCombustível();
     desenharModuloLunar();
     // "RequestAnimationFrame" repete a execução da função "desenhar" a cada quadro.
+    if(moduloLunar.posicao.y >= 600){
+        if(moduloLunar.velocidade.y >= 1.5){
+        return alert("Você morreu de queda!");
+        }else{
+        return alert("Você conseguiu pousar!");
+        }
+    }
     requestAnimationFrame(desenhar);
+    
 }
 
 // Seção de Controle:
@@ -120,7 +129,9 @@ function atracaoGravitacional() {
             moduloLunar.combustível = 0;
         }
     }
+   
 }
 
 
+    
 desenhar();
