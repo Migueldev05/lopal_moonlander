@@ -12,7 +12,7 @@ let contexto = canvas.getContext("2d");
 
 let moduloLunar = {
     posicao: {
-        x: 100,
+        x: 400,
         y: 100
     },
     angulo: 0,
