@@ -229,7 +229,7 @@ function consumoCombustivel(){
     }
 }
 
-let gravidade = 0.01;
+let gravidade = 0.005;
 function atracaoGravitacional(){
     moduloLunar.posicao.x += moduloLunar.velocidade.x;
     moduloLunar.posicao.y += moduloLunar.velocidade.y;
